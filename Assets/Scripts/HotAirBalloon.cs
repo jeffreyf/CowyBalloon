@@ -63,6 +63,23 @@ public class HotAirBalloon : MonoBehaviour
 
     private void DropOffCollectibles()
     {
+        if (GameState.NewCollectibles.Count > 0)
+        {
+            PlayRandomlyChosenAudioClip audioPlayer = GetComponent<PlayRandomlyChosenAudioClip>();
+            if (audioPlayer)
+            {
+                audioPlayer.PlayAudio();
+            }
+            else
+            {
+                AudioSource audioSource = GetComponent<AudioSource>();
+                if (audioSource)
+                {
+                    audioSource.Play();
+                }
+            }
+        }
+
         foreach (var collectible in GameState.NewCollectibles)
         {
             Debug.Log("dropping off a collectible");
