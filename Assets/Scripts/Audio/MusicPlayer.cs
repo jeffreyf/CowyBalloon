@@ -4,12 +4,36 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    public static MusicPlayer Instance
+    {
+        get
+        {
+            if(!instance)
+            {
+                instance = FindObjectOfType<MusicPlayer>();
+            }
+
+            if(!instance)
+            {
+                Debug.LogError("NO MUSICPLAYER IN THE SCENE");
+            }
+
+            return instance;
+        }
+    }
+    protected static MusicPlayer instance;
+
     public List<AudioSource> audios;
 
 
-    public void SetVolumes(List<float> volumes)
+    private void OnEnable()
     {
-        for(int i = 0; i < volumes.Count && i < audios.Count; i++)
+        instance = this;
+    }
+
+    public void SetVolumes(float[] volumes)
+    {
+        for(int i = 0; i < volumes.Length && i < audios.Count; i++)
         {
             audios[i].volume = volumes[i];
         }
