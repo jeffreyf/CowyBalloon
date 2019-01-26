@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 2296628406678867311}
   - component: {fileID: 2296628406678867310}
   m_Layer: 0
-  m_Name: Lower to Upper Atmosphere Trigger
+  m_Name: Music Fade Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,9 +119,13 @@ MonoBehaviour:
   bottomVolumes:
   - 1
   - 0
+  - 0
+  - 0
   topVolumes:
   - 0
   - 1
+  - 0
+  - 0
   lowerBound: {fileID: 2296628406106096863}
   upperBound: {fileID: 2296628406638192141}
 --- !u!23 &2296628406678867311

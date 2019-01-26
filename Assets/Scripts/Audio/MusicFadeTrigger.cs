@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MusicFadeTrigger : MonoBehaviour
 {
-    public float[] bottomVolumes = new float[2];
-    public float[] topVolumes = new float[2];
+    public float[] bottomVolumes = new float[4];
+    public float[] topVolumes = new float[4];
 
     public Transform lowerBound;
     public Transform upperBound;

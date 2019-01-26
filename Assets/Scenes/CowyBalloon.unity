@@ -623,6 +623,95 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &380163995
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2296628406678867309, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_Name
+      value: Upper to Edge Atmosphere Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867298, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867296, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: bottomVolumes.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867296, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: bottomVolumes.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867296, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: topVolumes.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296628406678867296, guid: 00e78d8e0256f734cb84659fe63cf216,
+        type: 3}
+      propertyPath: topVolumes.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00e78d8e0256f734cb84659fe63cf216, type: 3}
 --- !u!114 &525985040 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8184930875728826488, guid: 6a8ae4ee792073544b5b3b592e5af4a3,
