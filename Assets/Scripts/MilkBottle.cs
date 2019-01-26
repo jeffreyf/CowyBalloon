@@ -10,7 +10,7 @@ public class MilkBottle : MonoBehaviour
 
         if (hotAirBalloon)
         {
-            GameState.CollectedMilkBottles += 1;
+            GameState.NewMilkBottles += 1;
             Destroy(this.gameObject);
         }
     }
