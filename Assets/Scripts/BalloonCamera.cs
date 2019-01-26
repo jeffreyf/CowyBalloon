@@ -11,9 +11,9 @@ public class BalloonCamera : MonoBehaviour
 
     protected Camera cam;
 
-    public float maxVelocityLeeway = 2.5f; // This should actually be based off viewport position, may change later
-    public float velocityMultiplier = 1f;
-    public float velocityPower = 2f;
+    public float maxVelocityLeeway = 5f; // This should actually be based off viewport position, may change later
+    public float velocityMultiplier = 0.01f;
+    public float velocityPower = 5f;
 
     protected float smoothTime = 0.1f; // How long it should take to move to the desired position
 
