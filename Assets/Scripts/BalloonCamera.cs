@@ -17,6 +17,8 @@ public class BalloonCamera : MonoBehaviour
 
     protected float smoothTime = 0.1f; // How long it should take to move to the desired position
 
+    public Vector2 yBounds = new Vector2(0f, 100000000000000f); // Change this second value to the moon when we get there
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,9 @@ public class BalloonCamera : MonoBehaviour
             desiredPosition.y = target.transform.position.y;
             // Stay ahead of the balloon based on its velocity
             desiredPosition.y += Mathf.Clamp(Mathf.Pow(target.GetRigidbody().velocity.y, velocityPower) * velocityMultiplier, -maxVelocityLeeway, maxVelocityLeeway);
+
+            desiredPosition.y = Mathf.Clamp(desiredPosition.y, yBounds[0], yBounds[1]);
+
 
             transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velRef, smoothTime, Mathf.Infinity, Time.deltaTime);
         }
