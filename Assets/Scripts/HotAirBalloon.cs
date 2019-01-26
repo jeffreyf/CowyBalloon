@@ -44,7 +44,22 @@ public class HotAirBalloon : MonoBehaviour
             GameState.TotalMilkBottles += GameState.NewMilkBottles;
             GameState.NewMilkBottles = 0;
             GameState.Energy = GameState.MaxEnergy;
+
+            DropOffCollectibles();
         }
+    }
+
+    private void DropOffCollectibles()
+    {
+        foreach (var collectible in GameState.NewCollectibles)
+        {
+            Transform collectibleTransform = collectible.GetComponent<Transform>();
+            collectibleTransform.position = GameState.AvailableDropOffPositions.Dequeue();
+            collectibleTransform.localScale = collectible.GetComponent<Collectible>().InitialScale;
+
+            GameState.CollectedCollectibles.Add(collectible);
+        }
+        GameState.NewCollectibles.Clear();
     }
 
     public Rigidbody GetRigidbody()
