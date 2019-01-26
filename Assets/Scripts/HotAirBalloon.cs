@@ -26,10 +26,13 @@ public class HotAirBalloon : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 force = new Vector2(input.x * movementSpeeds.x, input.y * movementSpeeds.y) * Time.deltaTime;
-        rb.AddForce(force);
-
-        GameState.Energy -= Time.deltaTime * input.y * GameState.EnergyDecayRate;
+        float energyNeeded = Time.deltaTime * input.y * GameState.EnergyDecayRate;
+        if (GameState.Energy > energyNeeded)
+        {
+            Vector2 force = new Vector2(input.x * movementSpeeds.x, input.y * movementSpeeds.y) * Time.deltaTime;
+            rb.AddForce(force);
+            GameState.Energy -= energyNeeded;
+        }
     }
 
     public void OnCollisionEnter(Collision other)
