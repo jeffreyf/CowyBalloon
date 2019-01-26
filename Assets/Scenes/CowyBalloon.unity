@@ -623,6 +623,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &525985040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8184930875728826488, guid: 6a8ae4ee792073544b5b3b592e5af4a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 374673372}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0606fe099f0b6fe4da11a18e2b8f8e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca293f3375fc2c4daa365ebde02f128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 525985040}
   maxVelocityLeeway: 5
   velocityMultiplier: 0.01
   velocityPower: 5
