@@ -56,11 +56,24 @@ public class HotAirBalloon : MonoBehaviour
     {
         foreach (var collectible in GameState.NewCollectibles)
         {
-            Transform collectibleTransform = collectible.GetComponent<Transform>();
-            collectibleTransform.position = GameState.AvailableDropOffPositions.Dequeue();
-            collectibleTransform.localScale = collectible.GetComponent<Collectible>().InitialScale;
-
+            Debug.Log("dropping off a collectible");
             GameState.CollectedCollectibles.Add(collectible);
+
+            Vector3 targetPosition = GameState.AvailableDropOffPositions.Dequeue();
+            Vector3 targetScale = collectible.GetComponent<Collectible>().InitialScale;
+
+            CollectibleDropOffEffect effect = collectible.GetComponent<CollectibleDropOffEffect>();
+            if (effect)
+            {
+                Debug.Log("playing drop-off effect");
+                effect.BeginEffect(basket.position, targetPosition, targetScale);
+            }
+            else
+            {
+                Debug.Log("no drop-off effect found");
+                GetComponent<Transform>().position = targetPosition;
+                GetComponent<Transform>().localScale = targetScale;
+            }
         }
         GameState.NewCollectibles.Clear();
     }

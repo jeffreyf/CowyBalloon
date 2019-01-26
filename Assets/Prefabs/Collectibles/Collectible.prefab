@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2370881064988644099}
   - component: {fileID: 2370881064988644098}
   - component: {fileID: 4862379632400120201}
+  - component: {fileID: 5352484743443291144}
   m_Layer: 0
   m_Name: Collectible
   m_TagString: Untagged
@@ -93,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab56a212056a4c4bb2246e693c63ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InitialScale: {x: 0, y: 0, z: 0}
 --- !u!135 &2370881064988644098
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -118,7 +120,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e04b42336af3d4740ab75399158e4384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 1.5
+  particles: {fileID: 0}
+--- !u!114 &5352484743443291144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370881064988644108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6c1a34d68b0f94d8def11940962d11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   particles: {fileID: 0}
 --- !u!1001 &2370881064789453777
 PrefabInstance:
