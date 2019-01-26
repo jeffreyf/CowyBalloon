@@ -38,7 +38,7 @@ public class BalloonCamera : MonoBehaviour
 
             //Debug.Log(viewPosition);
             // At the edge of the screen
-            desiredPosition.y = target.transform.position.y;
+            desiredPosition.y = target.transform.position.y + 0.5f;
             // Stay ahead of the balloon based on its velocity
             desiredPosition.y += Mathf.Clamp(Mathf.Pow(target.GetRigidbody().velocity.y, velocityPower) * velocityMultiplier, -maxVelocityLeeway, maxVelocityLeeway);
 

@@ -51,8 +51,6 @@ public class CollectibleCollectEffect : MonoBehaviour
             transform.position = newPos;
             transform.localScale = Vector3.Lerp(startScale, Vector3.one * 0.05f, ellapsedRatio);
 
-            Debug.Log(ellapsedRatio);
-
             yield return null;
         }
 
