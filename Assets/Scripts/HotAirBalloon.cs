@@ -9,6 +9,9 @@ public class HotAirBalloon : MonoBehaviour
 
     protected Rigidbody rb;
 
+    [SerializeField]
+    protected Transform basket;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -65,5 +68,10 @@ public class HotAirBalloon : MonoBehaviour
     public Rigidbody GetRigidbody()
     {
         return rb;
+    }
+
+    public Transform GetBasketTransform()
+    {
+        return basket;
     }
 }
