@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 5ffcced900f62bc48a0deba351d409ab
+guid: 8486aa731b6b9564bb9d7f5eaa1b33b1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Teddy_Bear
+    100000: Flower
     100002: //RootNode
-    400000: Teddy_Bear
+    400000: Flower
     400002: //RootNode
     2100000: blinn2SG
-    2300000: Teddy_Bear
-    3300000: Teddy_Bear
-    4300000: Teddy_Bear
+    2300000: Flower
+    3300000: Flower
+    4300000: Flower
   externalObjects: {}
   materials:
     importMaterials: 1
