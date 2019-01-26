@@ -26,6 +26,21 @@ public class CollectibleCollectEffect : MonoBehaviour
             particles.Play();
         }
 
+        // Play some audio
+        PlayRandomlyChosenAudioClip audioPlayer = GetComponent<PlayRandomlyChosenAudioClip>();
+        if(audioPlayer)
+        {
+            audioPlayer.PlayAudio();
+        }
+        else
+        {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            if(audioSource)
+            {
+                audioSource.Play();
+            }
+        }
+
         while(t < duration)
         {
             t += Time.deltaTime;

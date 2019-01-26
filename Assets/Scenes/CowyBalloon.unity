@@ -944,6 +944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeeds: {x: 50, y: 100, z: 0}
+  basket: {fileID: 1594027704}
 --- !u!1001 &1158519987
 PrefabInstance:
   m_ObjectHideFlags: 0
