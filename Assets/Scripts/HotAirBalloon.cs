@@ -32,4 +32,9 @@ public class HotAirBalloon : MonoBehaviour
         Vector3 force = new Vector3(input.x * movementSpeeds.x, input.y * movementSpeeds.y, input.z * movementSpeeds.z) * Time.deltaTime;
         rb.AddForce(force);
     }
+
+    public Rigidbody GetRigidbody()
+    {
+        return rb;
+    }
 }
