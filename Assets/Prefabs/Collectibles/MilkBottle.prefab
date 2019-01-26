@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 393374088019116635}
   - component: {fileID: 393374088019116632}
   - component: {fileID: 393374088019116636}
+  - component: {fileID: 9066540199536671393}
   m_Layer: 0
   m_Name: MilkBottle
   m_TagString: Untagged
@@ -106,6 +107,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d43b85439ae3114891842c5dd2ef5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9066540199536671393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393374088019116633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04b42336af3d4740ab75399158e4384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1.5
+  particles: {fileID: 0}
 --- !u!1001 &3691632700625244586
 PrefabInstance:
   m_ObjectHideFlags: 0

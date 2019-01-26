@@ -18,7 +18,16 @@ public class Collectible : MonoBehaviour
             {
                 collected = true;
                 GameState.CollectedCollectibles.Add(this.gameObject);
-                GetComponent<Transform>().localScale = Vector3.zero;
+                CollectibleCollectEffect effect = GetComponent<CollectibleCollectEffect>();
+
+                if (effect)
+                {
+                    effect.BeginEffect(hotAirBalloon);
+                }
+                else
+                {
+                    GetComponent<Transform>().localScale = Vector3.zero;
+                }
             }
         } else {
             Debug.Log("Ignoring trigger from: " + other.name);
