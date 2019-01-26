@@ -9,6 +9,6 @@ public class Hud : MonoBehaviour
 
     void Update()
     {
-        EnergyText.text = GameState.Energy.ToString();
+        EnergyText.text = ((int)GameState.Energy).ToString();
     }
 }
