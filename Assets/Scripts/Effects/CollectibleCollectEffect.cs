@@ -26,6 +26,21 @@ public class CollectibleCollectEffect : MonoBehaviour
             particles.Play();
         }
 
+        // Play some audio
+        PlayRandomlyChosenAudioClip audioPlayer = GetComponent<PlayRandomlyChosenAudioClip>();
+        if(audioPlayer)
+        {
+            audioPlayer.PlayAudio();
+        }
+        else
+        {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            if(audioSource)
+            {
+                audioSource.Play();
+            }
+        }
+
         while(t < duration)
         {
             t += Time.deltaTime;
@@ -35,8 +50,6 @@ public class CollectibleCollectEffect : MonoBehaviour
             newPos.z = startPosition.z - 3f * Mathf.Sin(ellapsedRatio * Mathf.PI);
             transform.position = newPos;
             transform.localScale = Vector3.Lerp(startScale, Vector3.one * 0.05f, ellapsedRatio);
-
-            Debug.Log(ellapsedRatio);
 
             yield return null;
         }

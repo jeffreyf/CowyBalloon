@@ -5,6 +5,7 @@ using UnityEngine;
 public class HotAirBalloon : MonoBehaviour
 {
     public Vector3 movementSpeeds = Vector3.one;
+    public Vector3 maxVelocity = new Vector3(20f, 20f, 0f);
     protected Vector3 input;
 
     protected Rigidbody rb;
@@ -36,6 +37,14 @@ public class HotAirBalloon : MonoBehaviour
             rb.AddForce(force);
             GameState.Energy -= energyNeeded;
         }
+
+        // Clamp velocity
+        Vector3 velocity = rb.velocity;
+        velocity = new Vector3(Mathf.Clamp(velocity.x, -maxVelocity.x, maxVelocity.x),
+                               Mathf.Clamp(velocity.y, -maxVelocity.y, maxVelocity.y),
+                               Mathf.Clamp(velocity.z, -maxVelocity.z, maxVelocity.z));
+
+        rb.velocity = velocity;
     }
 
     public void OnCollisionEnter(Collision other)
