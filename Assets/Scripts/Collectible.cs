@@ -4,27 +4,24 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool collected;
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Triggered by: " + other.name);
-
-        HotAirBalloon hotAirBalloon = other.GetComponentInParent<HotAirBalloon>();
-
-        if(hotAirBalloon)
+        if (!collected)
         {
-            Destroy(hotAirBalloon.gameObject);
+            Debug.Log("Triggered by: " + other.name);
+
+            HotAirBalloon hotAirBalloon = other.GetComponentInParent<HotAirBalloon>();
+
+            if (hotAirBalloon)
+            {
+                collected = true;
+                GameState.CollectedCollectibles.Add(this.gameObject);
+                GetComponent<Transform>().localScale = Vector3.zero;
+            }
+        } else {
+            Debug.Log("Ignoring trigger from: " + other.name);
         }
     }
 }

@@ -9,16 +9,14 @@ public class HotAirBalloon : MonoBehaviour
 
     protected Rigidbody rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        input = Input.GetAxisRaw("Horizontal") * Vector3.right + Input.GetAxisRaw("Vertical") * Vector3.forward;
+        input = Input.GetAxisRaw("Horizontal") * Vector3.right;
 
         if (Input.GetButton("Jump"))
         {
@@ -26,10 +24,9 @@ public class HotAirBalloon : MonoBehaviour
         }
     }
 
-
     private void FixedUpdate()
     {
-        Vector3 force = new Vector3(input.x * movementSpeeds.x, input.y * movementSpeeds.y, input.z * movementSpeeds.z) * Time.deltaTime;
+        Vector2 force = new Vector2(input.x * movementSpeeds.x, input.y * movementSpeeds.y) * Time.deltaTime;
         rb.AddForce(force);
     }
 }
