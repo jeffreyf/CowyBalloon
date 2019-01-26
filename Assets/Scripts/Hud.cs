@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Hud : MonoBehaviour
 {
-    public Text EnergyText;
+    public GameObject EnergySlider;
     public Text PunText;
 
     void Start()
@@ -17,7 +17,12 @@ public class Hud : MonoBehaviour
 
     void Update()
     {
-        EnergyText.text = ((int)GameState.Energy).ToString();
+        Slider energySlider = EnergySlider.GetComponent<Slider>();
+        energySlider.maxValue = GameState.MaxEnergy;
+        energySlider.value = GameState.Energy;
+
+        RectTransform sliderTransform = EnergySlider.GetComponent<RectTransform>();
+        sliderTransform.sizeDelta = new Vector2(sliderTransform.sizeDelta.x, GameState.MaxEnergy * 6);
     }
 
     void ShowPun() {
