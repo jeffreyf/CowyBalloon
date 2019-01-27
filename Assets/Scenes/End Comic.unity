@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2cb705b2b39ed41a2597c91feb1394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: CowyBalloon
+  nextScene: Gallery
 --- !u!1 &465127681
 GameObject:
   m_ObjectHideFlags: 0
