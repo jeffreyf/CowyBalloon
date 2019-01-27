@@ -12,6 +12,7 @@ public class MusicFadeTrigger : MonoBehaviour
 
     // Super hack
     public bool fadeClouds = false;
+    public bool fadeStars = false;
 
     public void OnTriggerStay(Collider other)
     {
@@ -25,6 +26,11 @@ public class MusicFadeTrigger : MonoBehaviour
             if(fadeClouds)
             {
                 CloudFades.Instance.Fade(ratioBetweenBounds);
+            }
+
+            if(fadeStars)
+            {
+                StarFades.Instance.Fade(ratioBetweenBounds);
             }
         }
     }
