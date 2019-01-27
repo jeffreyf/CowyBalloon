@@ -57,6 +57,7 @@ public class CreditsConductor : MonoBehaviour
         audioSource.clip = polkaClip;
         audioSource.Play();
 
+        GameState.TotalMilkBottles = 1;
         StartCoroutine(FindObjectOfType<GalleryTrain>().MoveRight());
 
         yield break;
