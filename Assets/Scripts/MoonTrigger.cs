@@ -62,6 +62,15 @@ public class MoonTrigger : MonoBehaviour
 
         balloon.position = target.position;
 
+        yield return new WaitForSeconds(0.75f);
+
+        MoveRocket rocket = FindObjectOfType<MoveRocket>();
+
+        if(rocket)
+        {
+            yield return StartCoroutine(rocket.MoveToTransform(rocket.target));
+        }
+
         yield break;
     }
 }
