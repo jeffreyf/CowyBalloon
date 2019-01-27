@@ -6,6 +6,7 @@ public class CollectibleCollectEffect : MonoBehaviour
 {
     protected float duration = 0.5f; // How long it takes to move to the target when collected
     public ParticleSystem particles;
+    public Animator collectAnimation;
 
     public void BeginEffect(HotAirBalloon hotAirBalloon)
     {
@@ -24,6 +25,13 @@ public class CollectibleCollectEffect : MonoBehaviour
         if(particles)
         {
             particles.Play();
+        }
+
+        if (collectAnimation)
+        {
+            Debug.Log("playing collect animation");
+            collectAnimation.enabled = true;
+            collectAnimation.transform.parent = null;
         }
 
         // Play some audio
