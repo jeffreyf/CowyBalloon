@@ -10,6 +10,9 @@ public class MusicFadeTrigger : MonoBehaviour
     public Transform lowerBound;
     public Transform upperBound;
 
+    // Super hack
+    public bool fadeClouds = false;
+
     public void OnTriggerStay(Collider other)
     {
         if(other.GetComponentInParent<HotAirBalloon>())
@@ -18,6 +21,11 @@ public class MusicFadeTrigger : MonoBehaviour
             //Debug.Log(ratioBetweenBounds);
 
             MusicPlayer.Instance.SetVolumes(LerpBetweenTwoArraysOfFloats(bottomVolumes, topVolumes, ratioBetweenBounds));
+
+            if(fadeClouds)
+            {
+                CloudFades.Instance.Fade(ratioBetweenBounds);
+            }
         }
     }
 
