@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoonTrigger : MonoBehaviour
 {
@@ -70,6 +71,14 @@ public class MoonTrigger : MonoBehaviour
         {
             yield return StartCoroutine(rocket.MoveToTransform(rocket.target));
         }
+
+        if(MusicPlayer.Instance)
+        {
+            yield return StartCoroutine(MusicPlayer.Instance.FadeAllVolumes());
+        }
+
+        // Load the gallery
+        SceneManager.LoadScene("End Comic");
 
         yield break;
     }

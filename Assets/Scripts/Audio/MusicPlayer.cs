@@ -39,4 +39,23 @@ public class MusicPlayer : MonoBehaviour
         }
     }
 
+    public IEnumerator FadeAllVolumes(float duration=0.5f)
+    {
+        float t = 0f;
+        float[] startVolumes = new float[audios.Count];
+        float[] endVolumes = new float[audios.Count];
+
+        while(t < duration)
+        {
+            t += Time.deltaTime;
+
+            SetVolumes(MusicFadeTrigger.LerpBetweenTwoArraysOfFloats(startVolumes, endVolumes, t / duration));
+            yield break;
+        }
+
+        SetVolumes(endVolumes);
+
+        yield break;
+    }
+
 }
