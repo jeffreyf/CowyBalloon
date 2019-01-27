@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Hud : MonoBehaviour
 {
-    public GameObject EnergySlider;
     public Text PunText;
 
     public List<MilkUI> milks = new List<MilkUI>();
@@ -32,13 +31,6 @@ public class Hud : MonoBehaviour
             totalMilk -= 10f;
             milks[i].transform.parent.gameObject.SetActive(GameState.TotalMilkBottles + GameState.NewMilkBottles > i);
         }
-
-        Slider energySlider = EnergySlider.GetComponent<Slider>();
-        energySlider.maxValue = GameState.MaxEnergy;
-        energySlider.value = GameState.Energy;
-
-        RectTransform sliderTransform = EnergySlider.GetComponent<RectTransform>();
-        sliderTransform.sizeDelta = new Vector2(sliderTransform.sizeDelta.x, GameState.MaxEnergy * 6);
     }
 
     void ShowPun() {
