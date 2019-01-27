@@ -91,11 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 27b9a6b4bf9fe334dbd79fb2e7628a26, type: 3}
-  - {fileID: 8300000, guid: b1369f1a3d108b74cacbaa9c5c962426, type: 3}
-  - {fileID: 8300000, guid: b0d2414aa743fc54182de0717033a559, type: 3}
-  - {fileID: 8300000, guid: c20c2318c5b8f0d4ebbd23113013b9a7, type: 3}
-  - {fileID: 8300000, guid: ff62d237f0671094aad0947e264a6803, type: 3}
+  - {fileID: 8300000, guid: 7698119cec0d50d4fbcd0c873f8582cc, type: 3}
+  - {fileID: 8300000, guid: dc97f58ee59114f46abdfe3a19c84cbe, type: 3}
   audioSource: {fileID: 9175003386495474846}
 --- !u!33 &2370881064988644096
 MeshFilter:
