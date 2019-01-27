@@ -86,7 +86,7 @@ public class HotAirBalloon : MonoBehaviour
             GameState.CollectedCollectibles.Add(collectible);
 
             Vector3 targetPosition = GameState.AvailableDropOffPositions.Dequeue();
-            Vector3 targetScale = collectible.GetComponent<Collectible>().InitialScale;
+            Vector3 targetScale = collectible.GetComponent<Collectible>().InitialScale / 2;
 
             CollectibleDropOffEffect effect = collectible.GetComponent<CollectibleDropOffEffect>();
             if (effect)
