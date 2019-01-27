@@ -23,7 +23,24 @@ public class OutroComicConductor : MonoBehaviour
             ComicImage.sprite = ComicImages[i];
             yield return new WaitForSeconds(2.0f);
 		}
-        
+
+        yield return StartCoroutine(FadeAudio());
+
         SceneManager.LoadScene(nextScene);
+    }
+
+    IEnumerator FadeAudio()
+    {
+        float t = 0f;
+        AudioSource audioSource = FindObjectOfType<AudioSource>();
+
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime * 8f;
+            audioSource.volume = 1.0f - t;
+            yield return null;
+        }
+
+        yield break;
     }
 }

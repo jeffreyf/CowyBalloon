@@ -52,8 +52,28 @@ public class IntroComicConductor : MonoBehaviour
 		{
             ComicImage.sprite = ComicImages[i];
             yield return new WaitForSeconds(2.0f);
+            if(i == ComicImages.Count - 3)
+            {
+                StartCoroutine(FadeAudio());
+            }
 		}
-        
+
+        yield return new WaitForSeconds(0.25f);
         SceneManager.LoadScene(nextScene);
+    }
+
+    IEnumerator FadeAudio()
+    {
+        float t = 0f;
+        AudioSource audioSource = FindObjectOfType<AudioSource>();
+
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime * 0.25f;
+            audioSource.volume = 1.0f - t;
+            yield return null;
+        }
+
+        yield break;
     }
 }
