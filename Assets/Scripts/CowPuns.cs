@@ -23,6 +23,7 @@ public static class CowPuns {
         "We are not amoosed.",
         "Bull's eye.",
         "Get a mooove on!",
+        "Do you know the moofin man?"
     };
 
     public static string GetRandomPun() {
