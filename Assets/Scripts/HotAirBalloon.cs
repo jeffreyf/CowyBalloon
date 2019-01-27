@@ -30,11 +30,18 @@ public class HotAirBalloon : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(!rb)
+        {
+            return;
+        }
         float energyNeeded = Time.deltaTime * input.y * GameState.EnergyDecayRate;
         if (GameState.Energy > energyNeeded)
         {
             Vector2 force = new Vector2(input.x * movementSpeeds.x, input.y * movementSpeeds.y) * Time.deltaTime;
-            rb.AddForce(force);
+            if (rb)
+            {
+                rb.AddForce(force);
+            }
             GameState.Energy -= energyNeeded;
         }
 

@@ -36,15 +36,23 @@ public class BalloonCamera : MonoBehaviour
 
             Rigidbody rb = target.GetRigidbody();
 
-            //Debug.Log(viewPosition);
-            // At the edge of the screen
-            desiredPosition.y = target.transform.position.y + 0.5f;
-            // Stay ahead of the balloon based on its velocity
-            desiredPosition.y += Mathf.Clamp(Mathf.Pow(target.GetRigidbody().velocity.y, velocityPower) * velocityMultiplier, -maxVelocityLeeway, maxVelocityLeeway);
+            if (rb)
+            {
+                //Debug.Log(viewPosition);
+                // At the edge of the screen
+                desiredPosition.y = target.transform.position.y + 0.5f;
+                // Stay ahead of the balloon based on its velocity
+                desiredPosition.y += Mathf.Clamp(Mathf.Pow(target.GetRigidbody().velocity.y, velocityPower) * velocityMultiplier, -maxVelocityLeeway, maxVelocityLeeway);
 
-            desiredPosition.y = Mathf.Clamp(desiredPosition.y, yBounds[0], yBounds[1]);
+                desiredPosition.y = Mathf.Clamp(desiredPosition.y, yBounds[0], yBounds[1]);
 
+            }
+            else
+            {
+                // We're landing on the moon, so go to the max top.
+                desiredPosition.y = yBounds[1];
 
+            }
             transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velRef, smoothTime, Mathf.Infinity, Time.deltaTime);
         }
     }
