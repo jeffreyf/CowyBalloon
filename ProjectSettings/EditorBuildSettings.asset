@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 430ca4fb9f7982b4986afdd24f4eb2dd
+  - enabled: 1
     path: Assets/Scenes/CowyBalloon.unity
     guid: 213c86a795c6bed4faea9c616184843e
   - enabled: 1
