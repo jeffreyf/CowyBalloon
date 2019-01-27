@@ -25,6 +25,15 @@ public class MusicPlayer : MonoBehaviour
 
     public List<AudioSource> audios;
 
+    private void Update()
+    {
+#if !UNITY_WEBGL
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+#endif
+    }
 
     private void OnEnable()
     {
