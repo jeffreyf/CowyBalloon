@@ -15,7 +15,7 @@ public class MusicFadeTrigger : MonoBehaviour
         if(other.GetComponentInParent<HotAirBalloon>())
         {
             float ratioBetweenBounds = RatioBetweenBounds(other.transform.position.y);
-            Debug.Log(ratioBetweenBounds);
+            //Debug.Log(ratioBetweenBounds);
 
             MusicPlayer.Instance.SetVolumes(LerpBetweenTwoArraysOfFloats(bottomVolumes, topVolumes, ratioBetweenBounds));
         }
