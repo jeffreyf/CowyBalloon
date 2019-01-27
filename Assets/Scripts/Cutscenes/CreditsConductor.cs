@@ -11,6 +11,9 @@ public class CreditsConductor : MonoBehaviour
 
     public float duration = 10f;
 
+    public AudioSource audioSource;
+    public AudioClip polkaClip;
+
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -49,7 +52,12 @@ public class CreditsConductor : MonoBehaviour
             yield return null;
         }
 
+        cg.alpha = 0f;
 
+        audioSource.clip = polkaClip;
+        audioSource.Play();
+
+        StartCoroutine(FindObjectOfType<GalleryTrain>().MoveRight());
 
         yield break;
     }
