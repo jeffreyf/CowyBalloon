@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeeds: {x: 50, y: 100, z: 0}
-  maxVelocity: {x: 20, y: 20, z: 0}
+  maxVelocity: {x: 15, y: 15, z: 0}
   basket: {fileID: 8184930875767645931}
 --- !u!82 &8184930875728826495
 AudioSource:
